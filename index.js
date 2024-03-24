@@ -18,13 +18,13 @@ function createWindow () {
     }
   })
   win.loadURL('http://localhost/');
-	ipcMain.on("miniminze", (event, a) => {
+	ipcMain.on("minimize", (event, a) => {
 		win.minimize();
 	});
 	ipcMain.on("chrome", (event, a) => {
 		shell.openExternal(a)
 	});
-	ipcMain.on("maximinze", (event, a) => {
+	ipcMain.on("maximize", (event, a) => {
 		if (win.isMaximized()==false){
 			win.maximize();
 		} else {
